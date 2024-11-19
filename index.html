@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Peddy</title>
+    <!-- ? Daisy and tailwind css link -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@4.12.12/dist/full.min.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {},
+            fontFamily: {
+              lato: "Lato",
+              inter: "Inter",
+            },
+          },
+        },
+      };
+    </script>
+    <!-- Button active style -->
+    <style>
+      .active {
+        background-color: #e6f1f2;
+        border: 1.5px solid rgb(14, 122, 129);
+        border-radius: 120px;
+      }
+    </style>
+  </head>
+  <body class="font-lato">
+    <header>
+      <!-- Navbar section here -->
+      <nav class="lg:w-11/12 mx-auto">
+        <div class="navbar bg-base-100">
+          <div class="navbar-start">
+            <a class="btn btn-ghost text-[32px] font-black flex gap-2"
+              ><img src="./images/logo.webp" alt="" />Peddy</a
+            >
+          </div>
+          <div class="navbar-center hidden lg:flex">
+            <ul class="menu menu-horizontal px-1">
+              <li class="font-bold"><a>Home</a></li>
+              <li class="font-bold"><a>Shop</a></li>
+              <li class="font-bold"><a>Contact</a></li>
+            </ul>
+          </div>
+          <div class="navbar-end">
+            <a
+              class="w-10 h-10 rounded-full border-[3px] border-gray-300 shadow-sm"
+              ><img
+                class="w-full h-full p-2 cursor-pointer"
+                src="https://img.icons8.com/?size=48&id=fJ7hcfUGpKG7&format=png"
+                alt=""
+            /></a>
+            <div class="dropdown">
+              <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="h-5 w-5"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M4 6h16M4 12h8m-8 6h16"
+                  />
+                </svg>
+              </div>
+              <ul
+                tabindex="0"
+                class="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow right-0"
+              >
+                <li class="font-bold"><a>Home</a></li>
+                <li class="font-bold"><a>Shop</a></li>
+                <li class="font-bold"><a>Contact</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </nav>
+      <!-- Banner section starts here -->
+      <section
+        class="lg:w-11/12 mx-auto lg:pt-12 md:pt-10 pt-6 lg:pb-24 md:pb-18 pb-12"
+      >
+        <div class="flex flex-col justify-center items-center">
+          <div
+            class="flex flex-col justify-center items-center lg:w-1/2 md:w-3/4 w-11/12 mx-auto text-center gap-5"
+          >
+            <h5 class="text-2xl font-bold text-gray-500">
+              Bringing Families Together ❤️‍🔥
+            </h5>
+            <h1 class="lg:text-6xl md:text-4xl text-2xl font-black">
+              Your Path to Adoption Starts Here
+            </h1>
+            <h6>
+              At Peddy, we connect loving families with pets in need. Our
+              “Adopt, Don’t Shop” mission supports rescued animals, promoting
+              responsible pet ownership and ethical breeding. Find your perfect
+              companion today!
+            </h6>
+            <div>
+              <a href="#main"
+                ><button
+                  class="btn hover:bg-[#0E7A81] bg-[#0E7A81] text-white text-xl font-bold"
+                >
+                  View More
+                </button></a
+              >
+            </div>
+          </div>
+          <img src="./images/pet.webp" alt="" />
+        </div>
+      </section>
+      <!-- Banner section ends here -->
+    </header>
+    <!-- Main section starts here -->
+    <main class="w-11/12 mx-auto" id="main">
+      <!-- text div -->
+      <div class="lg:w-[46%] md:w-[60%] w-11/12 mx-auto text-center">
+        <h2 class="font-black lg:text-4xl md:text-3xl text-2xl mb-3">
+          Adopt Your Best Friend
+        </h2>
+        <p>
+          At Peddy, we connect loving families with pets in need. Our “Adopt,
+          Don’t Shop” mission supports rescued animals, promoting responsible
+          pet ownership and ethical breeding. Find your perfect companion today!
+        </p>
+      </div>
+      <!-- ?api button div -->
+      <div
+        id="button"
+        class="flex md:flex-row flex-col lg:gap-0 gap-4 justify-evenly font-inter pt-12 pb-8"
+      ></div>
+      <!--? best deal div -->
+      <div class="flex justify-between items-center pb-8">
+        <h2 class="text-base md:text-2xl font-black">Best Deal For you</h2>
+        <button
+          id="sort-price"
+          class="btn hover:bg-[#0E7A81] bg-[#0E7A81] text-white text-base md:text-xl font-bold"
+        >
+          Sort by price
+        </button>
+      </div>
+      <!-- ? spinner -->
+      <div id="spinner" class="hidden text-center">
+        <span class="loading loading-bars loading-lg"></span>
+      </div>
+      <div class="grid lg:grid-cols-4 pb-8 gap-4">
+        <!-- ? Display all pets div -->
+        <div
+          id="display-pets"
+          class="lg:col-span-3 grid lg:grid-cols-3 md:grid-cols-2 gap-4 border-2 border-gray-200 rounded-lg p-2"
+        ></div>
+
+        <!-- ?Pets after liked video -->
+        <div
+          id="liked"
+          class="lg:col-span-1 p-5 border-2 border-gray-200 rounded-lg"
+        >
+          <div id="liked-pets" class="grid md:grid-cols-2 gap-6"></div>
+        </div>
+      </div>
+    </main>
+    <!-- Main section ends here -->
+    <!-- ?Modal for details -->
+    <dialog id="customModal" class="modal modal-middle sm:modal-middle">
+      <div class="modal-box p-8 w-11/12 mx-auto">
+        <div id="modal-content" class=""></div>
+        <div class="modal-action">
+          <form method="dialog" class="w-full">
+            <!-- if there is a button in form, it will close the modal -->
+            <button class="btn w-full active rounded-lg">Close</button>
+          </form>
+        </div>
+      </div>
+    </dialog>
+    <!-- ?Modal for adopted -->
+    <dialog id="adoptModal" class="modal modal-middle sm:modal-middle">
+      <div
+        class="modal-box p-8 w-11/12 mx-auto flex justify-center items-center"
+      >
+        <div id="adaptModal-content" class="w-11/12 mx-auto"></div>
+        <div class="modal-action">
+          <form method="dialog" class="w-full">
+            <!-- if there is a button in form, it will close the modal -->
+            <button id="cancel" class=""></button>
+          </form>
+        </div>
+      </div>
+    </dialog>
+    <!-- footer section starts here -->
+    <footer
+      class="bg-black lg:py-[100px] lg:px-[140px] py-10 px-8 grid sm:grid-cols-3 lg:gap-56"
+    >
+      <div class="text-center md:text-start flex flex-col gap-1 text-gray-400">
+        <div class="pb-8 flex items-center md:justify-start justify-center">
+          <a class="text-[32px] font-black flex gap-2 items-center text-white"
+            ><img class="w-6 h-6" src="./images/logo.webp" alt="" />Peddy</a
+          >
+        </div>
+        <p>Location: av. Washington 165, NY CA 54003</p>
+        <p>Phone: +31 85 964 47 25</p>
+        <p>Email: info@yourdomain.com</p>
+        <p>Openings hours: 9.00 AM - 5.00 PM</p>
+        <div class="flex lg:justify-start justify-center gap-2">
+          <img
+            src="https://img.icons8.com/?size=48&id=118497&format=png"
+            alt=""
+          />
+          <img
+            src="https://img.icons8.com/?size=48&id=yoQabS8l0qpr&format=png"
+            alt=""
+          />
+          <img
+            src="https://img.icons8.com/?size=48&id=19318&format=png"
+            alt=""
+          />
+          <img
+            src="https://img.icons8.com/?size=48&id=Xy10Jcu1L2Su&format=png"
+            alt=""
+          />
+        </div>
+      </div>
+      <div class="text-center lg:text-start flex flex-col gap-4 text-gray-500">
+        <h2 class="pb-4 text-white font-bold font-inter text-lg">
+          Useful Links
+        </h2>
+        <p>Home</p>
+        <p>About Us</p>
+        <p>Animals</p>
+        <p>Foundation</p>
+        <p>Contact</p>
+      </div>
+      <div class="flex flex-col gap-4 text-center lg:text-start">
+        <h2 class="pb-4 text-white font-bold text-lg font-inter">
+          Drop a Message
+        </h2>
+        <input
+          type="text"
+          class="bg-gray-800 w-full p-3 rounded-xl"
+          placeholder="Enter Your Email"
+        />
+        <button
+          class="btn hover:bg-[#0E7A81] bg-[#0E7A81] text-white text-xl border-none font-bold w-full rounded-xl"
+        >
+          Subscribe
+        </button>
+      </div>
+    </footer>
+    <!-- footer section ends here -->
+
+    <!-- ? JavaScript linked here -->
+    <script src="./js/peddy.js"></script>
+  </body>
+</html>
